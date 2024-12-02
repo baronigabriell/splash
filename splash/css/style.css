@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+}
+header{
+    background-color: #73d2de;
+    color: white;
+    font-family: poppins;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+h1{
+    margin: 0;
+}
+body{
+    position: relative;  /* Necessário para que o footer seja posicionado em relação ao body */
+    min-height: 100vh;
+    margin: 0px;
+    font-family: poppins;
+    color: #FFFAFF;
+    background-color: #FFFAFF;
+}
+#img-1{
+    background-image: url(../img/mulhersorrindo.jpg);
+}
+
+#img-2{
+    background-image: url(../img/manutencao.jpg);
+}
+
+#img-3{
+    background-image: url(../img/servico.jpg);
+}
+
+.imagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-image{
+    border-radius: 30px;
+    box-shadow: #d1ccd1 0px 0px 25px 0px;
+    width: 470px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+}
+.overlay{
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 470px;
+    height: 150px;
+    background: linear-gradient(to top, #d81159, transparent);
+}
+.text{
+    position: absolute;
+    bottom: 20px;
+    left: 35px;
+    color: #FFFAFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+.card{
+    margin: 0% 2%;
+    padding: 12px;
+}
+.card:hover{
+    transform: scale(0.95);
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+    transition-property: transform, color;
+}
+.card:not(:hover){
+    transform: scale(1);
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+    transition-property: transform, color;
+}
