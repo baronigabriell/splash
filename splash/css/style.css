@@ -2,19 +2,16 @@ body{
     margin: 0;
 }
 header{
-    background-color: #73d2de;
+    background-color: #00296b;
     color: white;
     font-family: poppins;
     height: 100px;
     display: flex;
     align-items: center;
-    padding: 0px 20px;
-}
-h1{
-    margin: 0;
+    padding: 0px 60px;
 }
 body{
-    position: relative;  /* Necessário para que o footer seja posicionado em relação ao body */
+    position: relative; 
     min-height: 100vh;
     margin: 0px;
     font-family: poppins;
@@ -79,4 +76,60 @@ body{
     transition-timing-function: ease, ease;
     transition-delay: 0s, 0s;
     transition-property: transform, color;
+}
+#splash{
+    width: 120px;
+    height: auto;
+}
+#overlay-home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1262.56px; 
+    width: 1903px;
+    background: linear-gradient(to right, #003f88, transparent);
+}
+#product-class{
+    position: relative;
+    display: inline-block;
+}
+.overlay-text{
+    margin-left: 12%;
+    margin-top: 10%;
+}
+button{
+    font-family: poppins;
+    font-size: 15px;
+    width: 15%;
+    height: 5%;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: #00296b;
+    color: white;
+    margin: 1%;
+    margin-left: 12%;
+}
+button:hover{
+    background-color: white;
+    color: #00296b;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+button:not(:hover){
+    background-color: #00296b;
+    color: white;
+    transition: all 0.2s ease-in;
+}
+button:active{
+    transform: scale(0.9);
+}
+a{
+    text-decoration: none;
+}
+.text-nav{
+    display: inline;
+    color: white;
+    font-family: poppins;
+    font-size: 15px;
+    font-weight: 200;
 }

@@ -8,34 +8,65 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <header>
-    <h1>PARQUE SENAI</h1>
+    <a href="paginainicial.php">
+        <img src="../img/splash.png" alt="logotipo do splash" id="splash">    
+    </a>
+    <nav>
+        <a href="paginainicial.php"><p class="text-nav">HOME</p></a>
+        <a href="#cards"><p class="text-nav">MOTIVOS</p></a>
+    </nav>
 </header>
 <body>
-<div class="imagens">
-        <div class="card" style="margin-top: 4%;">
-            <a href="cadastrocliente.php">
-                <div class="product-image" id="img-1">
-                    <div class="overlay"></div>
-                    <div class="text">Cadastro de clientes</div>
-                </div>
-            </a>
+    <section id="home">
+        <div id="product-class">
+            <img src="../img/brinquedo-home.jpeg" alt="" style="height: auto; width: 1903px; display: block;">
+            <div id="overlay-home">
+                <h1 class="overlay-text">Diversão para todas as idades!</h1>
+                <p class="overlay-text" style="margin-top: 0; width: 40%; text-align: justify;">
+                Prepare-se para uma experiência refrescante e cheia de emoção no SPLASH, a atração aquática mais emocionante do nosso parque de diversões! Aqui, adrenalina e diversão se encontram em um passeio que promete molhar até os mais corajosos.
+                </p>
+                <a href="cadastrocliente.php">
+                    <button>Cadastro de clientes</button>
+                </a>
+                <br>
+                <a href="cadastromanutencao.php">
+                    <button>Cadastro de manuteção</button>
+                </a>
+                <br>
+                <a href="cadastroservico.php.php">
+                    <button>Cadastro de serviços</button>
+                </a>
+            </div>
         </div>
-        <div class="card">
-            <a href="cadastromanutencao.php">
-                <div class="product-image" id="img-2">
-                    <div class="overlay"></div>
-                    <div class="text">Cadastro da manutenção</div>
-                </div>
-            </a>
+        <div class="imagens">
+            <div class="card" style="margin-top: 4%;">
+                <a href="cadastrocliente.php">
+                    <div class="product-image" id="img-1">
+                        <div class="overlay"></div>
+                        <div class="text">Cadastro de clientes</div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="cadastromanutencao.php">
+                    <div class="product-image" id="img-2">
+                        <div class="overlay"></div>
+                        <div class="text">Cadastro da manutenção</div>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="cadastroservico.php.php">
+                    <div class="product-image" id="img-3">
+                        <div class="overlay"></div>
+                        <div class="text">Cadastro do serviço</div>
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="card">
-            <a href="cadastroservico.php.php">
-                <div class="product-image" id="img-3">
-                    <div class="overlay"></div>
-                    <div class="text">Cadastro do serviço</div>
-                </div>
-            </a>
-        </div>
-    </div>
+    </section>
+    <section id="cards">
+
+    </section>
 </body>
 </html>
