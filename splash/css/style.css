@@ -45,6 +45,7 @@ body{
     height: 1262.56px; 
     width: 1903px;
     background: linear-gradient(to right, #003f88, transparent);
+    z-index: 1;
 }
 #product-class{
     position: relative;
@@ -102,4 +103,37 @@ nav a:last-child{
 .text-nav:not(:hover){
     color: white;
     transition: all 0.2s ease-in;
+}
+#quadrado-azul{
+    background-color: #00296b;
+    width: 30%;
+    height: 40%;
+    padding: 60px;
+    box-sizing: border-box;
+    color: #e0e0e0;
+}
+h1{
+    margin: 0px 0px;
+}
+#cards{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -20%;
+    z-index: 3;
+}
+#cards img{
+    height: 400px;
+    width: auto;
+    border-radius: 0 20px 20px 0;
+}
+#contato{
+    position: absolute;
+    top: 75%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, #ffffff 80%, transparent);
+    height: 100dvh;
+    z-index: 1;
 }

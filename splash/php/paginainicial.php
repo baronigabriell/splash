@@ -14,13 +14,14 @@
     <nav>
         <a href="paginainicial.php"><p class="text-nav">HOME</p></a>
         <a href="#cards"><p class="text-nav">SOBRE O BRINQUEDO</p></a>
+        <a href="#contato"><p class="text-nav">CONTATO</p></a>
     </nav>
 </header>
 <body>
     <section id="home">
         <div id="product-class">
             <img src="../img/brinquedo-home.jpeg" alt="" style="height: auto; width: 1903px; display: block;">
-            <d id="overlay-home">
+            <div id="overlay-home">
                 <h1 class="overlay-text">Diversão para todas as idades!</h1>
                 <p class="overlay-text" style="margin-top: 0; width: 40%; text-align: justify;">
                 Prepare-se para uma experiência refrescante e cheia de emoção no SPLASH, a atração aquática mais emocionante do nosso parque de diversões! Aqui, adrenalina e diversão se encontram em um passeio que promete molhar até os mais corajosos.
@@ -38,12 +39,44 @@
                 </a>
             </div>
         </div>
-
     </section>
     <section id="cards">
-        <div >
-            
+        <div id="quadrado-azul">
+            <h1 style="color: white;">INFORMAÇÕES ESSENCIAIS</h1>
+            <p>
+                <strong>Altura do Brinquedo:</strong> 20 metros
+                <br>
+                <strong>Altura Mínima:</strong> 1,20 metros
+                <br>
+                <strong>Altura Máxima:</strong> 2,00 metros
+                <br>
+                <strong>Capacidade:</strong> 16 pessoas por rodada
+                <br>
+                <strong>Duração do Passeio:</strong> 3 minutos
+                <br>
+                <strong>Velocidade Máxima:</strong> 60 km/h
+                <br>
+                <br>
+                <strong>Características:</strong>
+                <br>
+                Uma queda emocionante com splash de água no final.
+                <br>
+                Ideal para quem busca adrenalina e diversão.
+                <br>
+                Vista panorâmica durante a subida.
+                <br>
+                <br>
+                <strong>Recomendações:</strong>
+                <br>
+                Trajes leves e confortáveis.
+                <br>
+                Objetos soltos não são permitidos.
+            </p>
         </div>
+        <img src="../img/familia-splash.jpeg" alt="família indo no splash">
+    </section>
+    <section id="contato">
+
     </section>
 </body>
 </html>
