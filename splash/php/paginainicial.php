@@ -20,7 +20,7 @@
 <body>
     <section id="home">
         <div id="product-class">
-            <img src="../img/brinquedo-home.jpeg" alt="" style="height: auto; width: 1903px; display: block;">
+            <img src="../img/brinquedo-home.jpeg" alt="" style="height: auto; width: 1519.2px; display: block;">
             <div id="overlay-home">
                 <h1 class="overlay-text">Diversão para todas as idades!</h1>
                 <p class="overlay-text" style="margin-top: 0; width: 40%; text-align: justify;">

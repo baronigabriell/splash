@@ -43,7 +43,7 @@ body{
     top: 0;
     left: 0;
     height: 1262.56px; 
-    width: 1903px;
+    width: 1519.2px;
     background: linear-gradient(to right, #003f88, transparent);
     z-index: 1;
 }
@@ -130,7 +130,7 @@ h1{
 }
 #contato{
     position: absolute;
-    top: 75%;
+    top: 65%;
     left: 0;
     right: 0;
     background: linear-gradient(to top, #ffffff 80%, transparent);
