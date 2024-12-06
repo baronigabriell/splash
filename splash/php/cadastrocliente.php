@@ -10,31 +10,35 @@
 </a>
 <nav>
     <a href="paginainicial.php"><p class="text-nav">HOME</p></a>
-    <a href="#cards"><p class="text-nav">SOBRE O BRINQUEDO</p></a>
-    <a href="#contato"><p class="text-nav">CONTATO</p></a>
+    <a href="paginainicial.php#cards"><p class="text-nav">SOBRE O BRINQUEDO</p></a>
+    <a href="paginainicial.php#contato"><p class="text-nav">CONTATO</p></a>
 </nav>
 </header>
 <body> 
-    <form method = "POST" action = "gravarcliente.php"></form>
-        <label for="nome">Nome</label>
-        <br>
-        <input type="text" name="nomex"></input>
-        <br>
-        <label for="cpf">CPF</label>
-        <br>
-        <input type="text" name="cpfx"></input>
-        <br>
-        <label for="telefone">Telefone</label>
-        <br>
-        <input type="text" name="telefonex"></input>
-        <br>
-        <label for="ingresso">Meia ou inteira</label>
-        <br>
-        <input type="text" name="ingressox"></input>
-        <br>
-        <input type=submit value="Gravar"></input>
-        <br>
-    </form>
-    <a href = "consultacliente.php">CONSULTAR</a>
+    <div class="form" style="position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);">
+        <h1>Cadastro de cliente</h1>
+        <form method="POST" action="gravarcliente.php">
+            <div class="single-input">
+                <input type="text" id="nomex" name="nomex" class="input" required>
+                <label for="nomex" class="label">Nome</label>
+            </div>
+            <div class="single-input">
+                <input type="text" id="cpfx" name="cpfx" class="input" required>
+                <label for="cpfx" class="label">CPF</label>
+            </div>
+            <div class="single-input">
+                <input type="text" id="telefonex" name="telefonex" class="input" required>
+                <label for="telefonex" class="label">Telefone</label>
+            </div>
+            <div class="single-input">
+                <input type="text" id="ingressox" name="ingressox" class="input" required>
+                <label for="ingressox" class="label">Meia ou inteira</label>
+            </div>
+            <input class="botao" type="submit" value="Enviar">
+        </form>
+        <a href="consultacliente.php">
+            <input class="botao" type="submit" value="Consultar">
+        </a>
+    </div>
 </body>
 </html>

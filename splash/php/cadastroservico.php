@@ -1,20 +1,44 @@
 <html> 
-    <head> 
-    <title> Cadastro Serviço</title>
-    </head>
-    <body> 
-        <form method = "POST" action = "gravarserviço.php">
-            <table> 
-                <tr> 
-                        <td> Serviço realizado: </td>
-                        
-                </tr>
-                <tr> 
-                        <td> <input type="text" name="nomex"></input> </td>
-                      
-                </tr>
-            </table>
+<head> 
+<title> Cadastro cliente</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<header>
+<a href="paginainicial.php">
+    <img src="../img/splash.png" alt="logotipo do splash" id="splash" style="margin-top: 0;">    
+</a>
+<nav>
+    <a href="paginainicial.php"><p class="text-nav">HOME</p></a>
+    <a href="paginainicial.php#cards"><p class="text-nav">SOBRE O BRINQUEDO</p></a>
+    <a href="paginainicial.php#contato"><p class="text-nav">CONTATO</p></a>
+</nav>
+</header>
+<body> 
+    <div class="form" style="position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);">
+        <h1>Cadastro de cliente</h1>
+        <form method="POST" action="gravarcliente.php">
+            <div class="single-input">
+                <input type="text" id="nomex" name="nomex" class="input" required>
+                <label for="nomex" class="label">Nome</label>
+            </div>
+            <div class="single-input">
+                <input type="text" id="cpfx" name="cpfx" class="input" required>
+                <label for="cpfx" class="label">CPF</label>
+            </div>
+            <div class="single-input">
+                <input type="text" id="telefonex" name="telefonex" class="input" required>
+                <label for="telefonex" class="label">Telefone</label>
+            </div>
+            <div class="single-input">
+                <input type="text" id="ingressox" name="ingressox" class="input" required>
+                <label for="ingressox" class="label">Meia ou inteira</label>
+            </div>
+            <input class="botao" type="submit" value="Enviar">
         </form>
-        <a href = "consultaservico.php">CONSULTAR</a>
-    </body>
+        <a href="consultacliente.php">
+            <input class="botao" type="submit" value="Consultar">
+        </a>
+    </div>
+</body>
 </html>

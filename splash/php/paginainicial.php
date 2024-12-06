@@ -34,7 +34,7 @@
                     <button>Cadastro de manuteção</button>
                 </a>
                 <br>
-                <a href="cadastroservico.php.php">
+                <a href="cadastroservico.php">
                     <button>Cadastro de serviços</button>
                 </a>
             </div>
@@ -76,7 +76,28 @@
         <img src="../img/familia-splash.jpeg" alt="família indo no splash">
     </section>
     <section id="contato">
-
+        <div class="form">
+            <h1>Cadastro de cliente</h1>
+            <form method="POST">
+                <div class="single-input">
+                    <input type="text" id="nomex" name="nomex" class="input" required>
+                    <label for="nomex" class="label">Nome</label>
+                </div>
+                <div class="single-input">
+                    <input type="text" id="cpfx" name="cpfx" class="input" required>
+                    <label for="cpfx" class="label">E-mail</label>
+                </div>
+                <div class="single-input">
+                    <input type="text" id="telefonex" name="telefonex" class="input" required>
+                    <label for="telefonex" class="label">Telefone</label>
+                </div>
+                <div class="single-input">
+                    <input type="text" id="ingressox" name="ingressox" class="input" required>
+                    <label for="ingressox" class="label">Mande sua dúvida</label>
+                </div>
+                <input class="botao" type="submit" value="Enviar">
+            </form>
+        </div>
     </section>
 </body>
 </html>
