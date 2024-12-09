@@ -1,9 +1,11 @@
 <?php
     include "conectabancosplash.php";
 
-    $servico = $_POST['servicox'];
+    $servico = $_POST ['servicox']; 
+    $tecnico = $_POST ['tecnicox'];
+    $data =  $_POST ['datax'];
 
-    $query = mysqli_query($conexao, "INSERT INTO servico (ser_nome) VALUES ('$servico');");
+    $query = mysqli_query($conexao, "INSERT INTO manutenção (man_nomeservico, man_tecnico, man_data) VALUES ('$servico', '$tecnico','$data');");
     mysqli_close($conexao);
 ?>
 <html>

@@ -1,16 +1,12 @@
 <?php 
 include "conectabancosplash.php"; 
 
-// Inicializa a variável de busca como vazia
 $busca = '';
 
-// Verifica se o formulário foi enviado e atribui o valor de busca
 if (!empty($_POST['cpfx'])) {
     $busca = $_POST['cpfx'];
 }
-
 ?>
-
 <html>
 <head>
     <title>Consulta Cliente</title>
@@ -30,7 +26,7 @@ if (!empty($_POST['cpfx'])) {
 <body>
     <div>
         <form method="POST" action="" style="width: 100%; display: flex; justify-content: center;">
-            <div class="box" style="width: 27%; bottom: 0;">
+            <div class="box" style="width: 32%; bottom: 0;">
                 <div class="single-input">
                     <input type="text" id="cpf" name="cpfx" class="input" value="<?php echo htmlspecialchars($busca); ?>" required>
                     <label for="nomex" class="label">CPF do cliente</label>
@@ -40,10 +36,9 @@ if (!empty($_POST['cpfx'])) {
                 </div>
                 <?php
                 if (!empty($busca)) {
-                    echo "<div class='resultado'>";
-                    echo "<p>Resultado para CPF: " . htmlspecialchars($busca) . "</p>";
                     echo "<table>";
-                    echo "<tr><th>CPF</th><th>Ação</th></tr>";
+                    echo "<div>";
+                    echo "<tr><th>Nome</th><th>CPF</th><th>Telefone</th><th>Ingresso</th></tr>";
                     $query = mysqli_query($conexao, "SELECT bil_cod, bil_cpf, bil_nome, bil_telefone, bil_ingresso FROM bilheteria WHERE bil_cpf LIKE '%$busca%' GROUP BY 1");
                     if (mysqli_num_rows($query) > 0) {
                         while ($saida = mysqli_fetch_array($query)) {
@@ -52,13 +47,13 @@ if (!empty($_POST['cpfx'])) {
                             $nome = $saida['bil_nome'];
                             $telefone = $saida['bil_telefone'];
                             $ingresso = $saida['bil_ingresso'];
-                            
                             echo "<tr>";
-                            echo "<td class='titulo'>" . htmlspecialchars($cpf) . "</td>";
+                            echo "<tr>";
                             echo "<td class='titulo'>" . htmlspecialchars($nome) . "</td>";
+                            echo "<td class='titulo'>" . htmlspecialchars($cpf) . "</td>";
                             echo "<td class='titulo'>" . htmlspecialchars($telefone) . "</td>";
                             echo "<td class='titulo'>" . htmlspecialchars($ingresso) . "</td>";
-                            echo "<td id='excluir'><a href='exclusao_ele.php?id=" . $codigo . "'>
+                            echo "<td id='excluir'><a href='exclusaocan.php?id=" . $codigo . "'>
                             <button class='deleteButton'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
@@ -86,7 +81,7 @@ if (!empty($_POST['cpfx'])) {
                                 <span class='tooltip'>Delete</span>
                             </button>
                             </a></td>";
-                            echo "<td id='alterar'><a href='alteracao_ele.php?id=" . $codigo . "'>
+                            echo "<td id='alterar'><a href='alteracaocan.php?id=" . $codigo . "'>
                             <label class='container'>
                                 <input type='checkbox'>
                                 <svg id='Glyph' version='1.1' viewBox='0 0 32 32' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><path d='M29.845,17.099l-2.489,8.725C26.989,27.105,25.804,28,24.473,28H11c-0.553,0-1-0.448-1-1V13  c0-0.215,0.069-0.425,0.198-0.597l5.392-7.24C16.188,4.414,17.05,4,17.974,4C19.643,4,21,5.357,21,7.026V12h5.002  c1.265,0,2.427,0.579,3.188,1.589C29.954,14.601,30.192,15.88,29.845,17.099z' id='XMLID_254_'></path><path d='M7,12H3c-0.553,0-1,0.448-1,1v14c0,0.552,0.447,1,1,1h4c0.553,0,1-0.448,1-1V13C8,12.448,7.553,12,7,12z   M5,25.5c-0.828,0-1.5-0.672-1.5-1.5c0-0.828,0.672-1.5,1.5-1.5c0.828,0,1.5,0.672,1.5,1.5C6.5,24.828,5.828,25.5,5,25.5z' id='XMLID_256_'></path></svg>
@@ -144,10 +139,11 @@ if (!empty($_POST['cpfx'])) {
         background-color: #f3edf3;
         padding: 30px 45px;
         border-radius: 40px 40px 0 0;
-        height: 600px;
+        height: 500px;
         align-self: flex-start;
         position: absolute;
         bottom: 0;
+        color: black;
     }
     form .pesquisar {
         position: absolute;
@@ -182,11 +178,11 @@ if (!empty($_POST['cpfx'])) {
     }
     table th, table td {
         padding: 8px;
-        border: 1px solid #ddd;
-        text-align: center;
+        color: #666;
     }
     table th {
         background-color: #f3edf3;
+        text-align: left;
     }
     .deleteButton {
         width: 40px;
@@ -277,7 +273,7 @@ if (!empty($_POST['cpfx'])) {
         transition: all 0.3s;
         fill: #666;
     }
-    .container:hover svg:hover{
+    .container:hover #Glyph{
         fill: #fff;
         transform: scale(1.1) rotate(-10deg);
     }

@@ -17,33 +17,18 @@
 <body> 
     <div class="form" style="position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);">
         <h1>Cadastro de manutenção</h1>
-        <form method="POST" action="gravarcliente.php">
+        <form method="POST" action="gravarmanutencao.php">
             <div class="single-input">
-                <input type="text" id="nomex" name="nomex" class="input" required>
-                <label for="nomex" class="label">Nome</label>
+                <input type="text" id="servicox" name="servicox" class="input" required>
+                <label for="servicox" class="label">Nome do serviço</label>
             </div>
             <div class="single-input">
-                <input type="text" id="cpfx" name="cpfx" class="input" required>
-                <label for="cpfx" class="label">CPF</label>
+                <input type="text" id="tecnicox" name="tecnicox" class="input" required>
+                <label for="tecnicox" class="label">Nome do técnico</label>
             </div>
             <div class="single-input">
-                <input type="text" id="telefonex" name="telefonex" class="input" style="margin-bottom: 16px;" required>
-                <label for="telefonex" class="label" style="margin-bottom: 16px;">Telefone</label>
-            </div>
-            <div class="single-input">
-                <label for="ingressox" class="label" >Meia ou inteira</label>
-            </div>
-            <div class="custom-radio">
-                <input type="radio" id="radio-1" name="tabs">
-                <label class="radio-label" for="radio-1">
-                <div class="radio-circle"></div>
-                <span class="radio-text">Meia</span>
-                </label>
-                <input type="radio" id="radio-2" name="tabs">
-                <label class="radio-label" for="radio-2">
-                <div class="radio-circle"></div>
-                <span class="radio-text">Inteira</span>
-                </label>
+                <input type="text" id="datax" name="datax" class="input" style="margin-bottom: 10px;" required>
+                <label for="datax" class="label" style="margin-bottom: 16px;">Data da manutenção</label>
             </div>
             <input class="botao" type="submit" value="Enviar">
         </form>
@@ -51,5 +36,16 @@
             <input class="botao" type="submit" value="Consultar">
         </a>
     </div>
+    <script>
+        const data = document.querySelector('#datax')
+
+        data.addEventListener('keypress', () => {
+            datalength = data.value.length
+
+            if (datalength === 2 || datalength === 5){
+                data.value += '/'
+            } 
+        })
+    </script>
 </body>
 </html>

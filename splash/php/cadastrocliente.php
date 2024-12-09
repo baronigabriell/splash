@@ -34,12 +34,12 @@
                 <label for="ingressox" class="label" >Meia ou inteira</label>
             </div>
             <div class="custom-radio">
-                <input name="ingressox" type="radio" id="radio-1" value="meia">
+                <input name="ingressox" type="radio" id="radio-1" value="Meia">
                 <label class="radio-label" for="radio-1">
                 <div class="radio-circle"></div>
                 <span class="radio-text">Meia</span>
                 </label>
-                <input name="ingressox" type="radio" id="radio-2" value="inteira">
+                <input name="ingressox" type="radio" id="radio-2" value="Inteira">
                 <label class="radio-label" for="radio-2">
                 <div class="radio-circle"></div>
                 <span class="radio-text">Inteira</span>
