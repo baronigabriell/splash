@@ -53,7 +53,7 @@ if (!empty($_POST['cpfx'])) {
                             echo "<td class='titulo'>" . htmlspecialchars($cpf) . "</td>";
                             echo "<td class='titulo'>" . htmlspecialchars($telefone) . "</td>";
                             echo "<td class='titulo'>" . htmlspecialchars($ingresso) . "</td>";
-                            echo "<td id='excluir'><a href='exclusaocan.php?id=" . $codigo . "'>
+                            echo "<td id='excluir'><a href='exclusaocan.php?id=<?php echo $codigo; ?>'>
                             <button class='deleteButton'>
                                 <svg
                                     xmlns='http://www.w3.org/2000/svg'
