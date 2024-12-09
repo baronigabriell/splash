@@ -16,27 +16,15 @@
 </header>
 <body> 
     <div class="form" style="position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);">
-        <h1>Cadastro de cliente</h1>
-        <form method="POST" action="gravarcliente.php">
+        <h1>Cadastro de serviços</h1>
+        <form method="POST" action="gravarservico.php">
             <div class="single-input">
-                <input type="text" id="nomex" name="nomex" class="input" required>
-                <label for="nomex" class="label">Nome</label>
-            </div>
-            <div class="single-input">
-                <input type="text" id="cpfx" name="cpfx" class="input" required>
-                <label for="cpfx" class="label">CPF</label>
-            </div>
-            <div class="single-input">
-                <input type="text" id="telefonex" name="telefonex" class="input" required>
-                <label for="telefonex" class="label">Telefone</label>
-            </div>
-            <div class="single-input">
-                <input type="text" id="ingressox" name="ingressox" class="input" required>
-                <label for="ingressox" class="label">Meia ou inteira</label>
+                <input type="text" id="nomex" name="servicox" class="input" required>
+                <label for="nomex" class="label">Nome do serviço</label>
             </div>
             <input class="botao" type="submit" value="Enviar">
         </form>
-        <a href="consultacliente.php">
+        <a href="../php/consultacliente.php">
             <input class="botao" type="submit" value="Consultar">
         </a>
     </div>

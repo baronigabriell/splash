@@ -6,7 +6,7 @@
     $telefone =  $_POST ['telefonex'];
     $ingresso = $_POST ['ingressox'];
 
-    $query = mysqli_query($conexao, "insert into bilheteria (bil_nome, bil_cpf,  bil_telefone, bil_ingresso) values ('$nome', '$cpf','$telefone', '$ingresso');");
+    $query = mysqli_query($conexao, "INSERT INTO bilheteria (bil_nome, bil_cpf, bil_telefone, bil_ingresso) VALUES ('$nome', '$cpf','$telefone', '$ingresso');");
     mysqli_close($conexao);
 ?>
 <html>

@@ -1,8 +1,15 @@
 html{
     scroll-behavior: smooth;
+    margin: 0;
 }
 body{
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body main{
+    flex: 1 1 0;
 }
 header{
     background-color: #00296b;
@@ -115,27 +122,29 @@ nav a:last-child{
 h1{
     margin: 0px 0px;
 }
-#cards{
-    display: flex; 
+#cards {
+    position: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin-top: -20%;
     z-index: 3;
+    background: linear-gradient(to top, #fffaff 70%, transparent);
 }
 #cards img{
     height: 400px;
     width: auto;
     border-radius: 0 20px 20px 0;
 }
-#contato{
-    position: absolute;
-    top: 65%;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, #ffffff 80%, transparent);
-    height: 100dvh;
+#contato {
+    position: relative; 
     z-index: 1;
+}
+#contato img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0; 
 }
 div.single-input{
     width: 100%;
@@ -170,11 +179,13 @@ div.single-input .input:valid ~ label{
     color: #3ba0ff;
     transition: 0.4s ease-in-out;
 }
-.form{
+.form {
+    margin: 0 auto; 
     background-color: #00296b;
-    width: 30%;
     padding: 50px;
     border-radius: 30px;
+    width: 30%;
+    z-index: 2;
 }
 input{
     background-color: #00296b;
@@ -204,4 +215,55 @@ input{
 }
 .botao:active{
     transform: scale(0.9);
+}
+footer {
+    background-color: #00296b;
+    color: white;
+    height: 100px;
+    font-family: poppins;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4%;
+}
+.custom-radio {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.custom-radio input[type="radio"] {
+    display: none;
+}
+.radio-label {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.radio-label:last-child{
+    margin-bottom: 16px;
+}
+.radio-circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.radio-text {
+    font-size: 15px;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+.custom-radio input[type="radio"]:checked + .radio-label {
+    background-color: #00296b;
+}
+.custom-radio input[type="radio"]:checked + .radio-label .radio-circle {
+    border-color: #fff;
+    background-color: #3ba0ff;
+}
+.custom-radio input[type="radio"]:checked + .radio-label .radio-text {
+    color: #3ba0ff;
 }

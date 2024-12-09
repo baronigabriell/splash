@@ -16,30 +16,30 @@
 </header>
 <body> 
     <div class="form" style="position: absolute; top: 58%; left: 50%; transform: translate(-50%,-50%);">
-        <h1>Cadastro de cliente</h1>
+        <h1>Cadastro de manutenção</h1>
         <form method="POST" action="gravarcliente.php">
             <div class="single-input">
                 <input type="text" id="nomex" name="nomex" class="input" required>
                 <label for="nomex" class="label">Nome</label>
             </div>
             <div class="single-input">
-                <input id="cpf" type="text" name="cpfx" class="input" maxlength="14" required>
+                <input type="text" id="cpfx" name="cpfx" class="input" required>
                 <label for="cpfx" class="label">CPF</label>
             </div>
             <div class="single-input">
-                <input type="text" id="telefone" name="telefonex" class="input" style="margin-bottom: 16px;" required>
+                <input type="text" id="telefonex" name="telefonex" class="input" style="margin-bottom: 16px;" required>
                 <label for="telefonex" class="label" style="margin-bottom: 16px;">Telefone</label>
             </div>
             <div class="single-input">
                 <label for="ingressox" class="label" >Meia ou inteira</label>
             </div>
             <div class="custom-radio">
-                <input name="ingressox" type="radio" id="radio-1" value="meia">
+                <input type="radio" id="radio-1" name="tabs">
                 <label class="radio-label" for="radio-1">
                 <div class="radio-circle"></div>
                 <span class="radio-text">Meia</span>
                 </label>
-                <input name="ingressox" type="radio" id="radio-2" value="inteira">
+                <input type="radio" id="radio-2" name="tabs">
                 <label class="radio-label" for="radio-2">
                 <div class="radio-circle"></div>
                 <span class="radio-text">Inteira</span>
@@ -51,34 +51,5 @@
             <input class="botao" type="submit" value="Consultar">
         </a>
     </div>
-    <script>
-        const cpf = document.querySelector('#cpf')
-
-        cpf.addEventListener('keypress', () => {
-            cpflength = cpf.value.length
-
-            if (cpflength === 3 || cpflength === 7){
-                cpf.value += '.'
-            } else if (cpflength === 11){
-                cpf.value += '-'
-            }
-        })
-
-        const telefone = document.querySelector('#telefone')
-
-        telefone.addEventListener('keypress', () => {
-            telefoneLength = telefone.value.length;
-
-            if (telefoneLength === 0) {
-                telefone.value += '(';
-            } else if (telefoneLength === 3) {
-                telefone.value += ') ';
-            } else if (telefoneLength === 5) {
-                telefone.value += ' ';
-            }else if (telefoneLength === 10) {
-                telefone.value += '-';
-            }
-        });
-    </script>
 </body>
 </html>
